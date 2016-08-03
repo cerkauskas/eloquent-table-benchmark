@@ -1,27 +1,27 @@
-# Laravel PHP Framework with Developer tools
-
-This is Laravel with some added convenience for developer.
-
-## Additions
-### Installed packages
-* barryvdh/laravel-debugbar
-* barryvdh/laravel-ide-helper
-* doctrine/dbal
+# Eloquent table field presence benchmark
 
 ### Commands
-This instance has a command for generating helper files for PhpStorm. All you need to do is call `php artisan dev:gen` command and you are ready to go!
+`php artisan benchmark:table-names {amount}`
+If no amount is specified, then it will become 1000.
 
 ## Installation
-**Step 1**: clone repository's `cerkauskas/dev` branch
-> git clone -b cerkauskas/dev https://github.com/cerkauskas/laravel.git my-project
+**Step 1**: Clone repository
+> git clone https://github.com/cerkauskas/eloquent-table-benchmark.git && cd eloquent-table-benchmark
 
-**Step 2**: install dependencies
+**Step 2**: Launch VirtualBox
+> vagrant up
+
+**Step 3**: Get inside VirtualBox
+> vagrant ssh
+
+**Step 4**: install dependencies
 > composer install
 
-**Step 3**: make .env
+**Step 5**: make .env
 > cp .env.example .env
 
-**Step 4**: generate key
+**Step 6**: generate key
 > php artisan key:generate
 
-**Step 5**: enjoy!
+**Step 7**: perform benchmark test with million entries
+> php artisan benchmark:table-names 1000000
