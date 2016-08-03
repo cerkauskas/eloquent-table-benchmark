@@ -2,6 +2,7 @@
 
 ### Commands
 > php artisan benchmark:table-names {amount}
+
 If no amount is specified, then it will become 1000.
 
 ## Installation
