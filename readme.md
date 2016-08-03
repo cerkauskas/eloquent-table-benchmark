@@ -1,6 +1,8 @@
 # Eloquent table field presence benchmark
+This is code, that I used to perform benchmark test.
+More on it [on my blog](http://tomas.cerkauskas.lt/is-it-worth-to-set-eloquent-fields-explicitly/)
 
-### Commands
+## Commands
 > php artisan benchmark:table-names {amount}
 
 If no amount is specified, then it will become 1000.
